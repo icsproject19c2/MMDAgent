@@ -256,6 +256,7 @@
 134  135  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 135  2    MOTION_EVENT_CHANGE|mei|base        <eps>
 
+
 #Manzai
 1    201  RECOG_EVENT_STOP|漫才               MODEL_DELETE|menu
 1    201  KEY|o                               MODEL_DELETE|menu
@@ -411,228 +412,257 @@
 340  341  SYNTH_EVENT_STOP|mei                TEXTAREA_DELETE|caption_1
 341  2    <eps>                               MODEL_ADD|menu
 
-#zatugaku  0501-0600
-1    501   RECOG_EVENT_STOP|雑学                VALUE_SET|x|0|6
-1    501   RECOG_EVENT_STOP|雑談                VALUE_SET|x|0|6
-1    501   KEY｜y                               VALUE_SET|x|0|6        
 
-501  502   VALUE_EVENT_SET|x                    VALUE_EVAL|x|LE|1
-502  512   VALUE_EVENT_EVAL|x|LE|1|TRUE         <eps>
-512  550   <eps>                                SYNTH_START|mei|mei_voice_normal|ネズミといえばチーズが大好物というイメージがある。しかし、ネズミはチーズが好きではなく、他に食べ物があるときは絶対に食べない。
-502  503   VALUE_EVENT_EVAL|x|LE|1|FALSE        VALUE_EVAL|x|LE|2
-503  513   VALUE_EVENT_EVAL|x|LE|2|TRUE         <eps>
-513  550   <eps>                                SYNTH_START|mei|mei_voice_normal|スポーツドリンクはスポーツ選手の水分補給用に開発されたが、体に吸収される速度は水よりも遅い。 
-503  504   VALUE_EVENT_EVAL|x|LE|2|FALSE        VALUE_EVAL|x|LE|3
-504  514   VALUE_EVENT_EVAL|x|LE|3|TRUE         <eps>
-514  550   <eps>                                SYNTH_START|mei|mei_voice_normal|髪の毛は1日に0.3から0.5mm伸びるといわれているが、もしも全身の毛が1本に合わさったとすると1分間に約3cm伸びている計算になる。
-504  505   VALUE_EVENT_EVAL|x|LE|3|FALSE        VALUE_EVAL|x|LE|4
-505  515   VALUE_EVENT_EVAL|x|LE|4|TRUE         <eps>
-515  550   <eps>                                SYNTH_START|mei|mei_voice_normal|開発されたが、体に吸収される速度は水よりも遅い。 
-505  506   VALUE_EVENT_EVAL|x|LE|4|FALSE        VALUE_EVAL|x|LE|5
-506  516   VALUE_EVENT_EVAL|x|LE|5|TRUE         <eps>
-516  550   <eps>                                SYNTH_START|mei|mei_voice_normal|パソコンを操作するさいに使うマウス。このマウスを動かした時の長さの単位はミッキーで、１ミッキー、２ミッキーと数える。
-506  517   VALUE_EVENT_EVAL|x|LE|5|FALSE        <eps>
-517  550   <eps>                                SYNTH_START|mei|mei_voice_normal|日本の球場は同じ方向を向いて建てられている。理由としてはルールブックに本塁から投手板を経て二塁に向かう線は東北東に向かっている事を理想とするとあるためである。
+#Guide
+1    401  RECOG_EVENT_STOP|地図               MODEL_DELETE|menu
+1    401  KEY|t                               MODEL_DELETE|menu
+401  402  <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+402  403  <eps>                               TIMER_START|timer_caption|32
+403  404  <eps>                               TEXTAREA_ADD|map|17,9|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
+404  405  TEXTAREA_EVENT_ADD|map              TEXTAREA_SET|map|img\hino_2.jpg
+405  406  <eps>                               TEXTAREA_SET|caption_1|"地図を見てください。赤い星のある場所が現在地である、食堂となります。"
+406  407  <eps>                               SYNTH_START|mei|mei_voice_normal|地図を見てください。赤い星のある場所が現在地である、食堂となります。
+407  408  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"そして地図には1から10までの番号が記してあります。1番が1号館。2番が2号館。3番が3号館。4番が4号館。5番が5号館。"
+408  409  <eps>                               SYNTH_START|mei|mei_voice_normal|そして地図には1から10までの番号が記してあります。1番が1号館。2番が2号館。3番が3号館。4番が4号館。5番が5号館。
+409  410  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"6番は大学会館。7番が体育館。8番はフットサル、テニス兼用コート。9番はさくら広場。そして、10番が正門となります。"
+410  411  <eps>                               SYNTH_START|mei|mei_voice_normal|6番は大学会館。7番が体育館。8番はフットサル、テニス兼用コート。9番はさくら広場。そして、10番が正門となります。
+411  412  SYNTH_EVENT_STOP|mei                TEXTAREA_DELETE|caption_1
+412  413  TIMER_EVENT_STOP|timer_caption      TEXTAREA_DELETE|map
+413  2    <eps>                               MODEL_ADD|menu
 
-550   2    SYNTH_EVENT_STOP|mei                 <eps>
+
+#zatugaku
+1    501  RECOG_EVENT_STOP|雑学               MODEL_DELETE|menu
+1    501  RECOG_EVENT_STOP|雑談               MODEL_DELETE|menu
+1    501  KEY|y                               MODEL_DELETE|menu
+501  502  <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+502  503  <eps>                               VALUE_SET|x|0|5
+503  504  VALUE_EVENT_SET|x                   VALUE_EVAL|x|LE|1
+504  520  VALUE_EVENT_EVAL|x|LE|1|TRUE        <eps>
+520  521  <eps>                               TEXTAREA_SET|caption_1|"ネズミといえばチーズが大好物というイメージがある。しかし、ネズミはチーズが好きではなく、他に食べ物があるときは絶対に食べない。"
+521  590  <eps>                               SYNTH_START|mei|mei_voice_normal|ネズミといえばチーズが大好物というイメージがある。しかし、ネズミはチーズが好きではなく、他に食べ物があるときは絶対に食べない。
+504  505  VALUE_EVENT_EVAL|x|LE|1|FALSE       VALUE_EVAL|x|LE|2
+505  530  VALUE_EVENT_EVAL|x|LE|2|TRUE        <eps>
+530  531  <eps>                               TEXTAREA_SET|caption_1|"スポーツドリンクはスポーツ選手の水分補給用に開発されたが、体に吸収される速度は水よりも遅い。"
+531  590  <eps>                               SYNTH_START|mei|mei_voice_normal|スポーツドリンクはスポーツ選手の水分補給用に開発されたが、体に吸収される速度は水よりも遅い。
+505  506  VALUE_EVENT_EVAL|x|LE|2|FALSE       VALUE_EVAL|x|LE|3
+506  540  VALUE_EVENT_EVAL|x|LE|3|TRUE        <eps>
+540  541  <eps>                               TEXTAREA_SET|caption_1|"髪の毛は1日に0.3から0.5mm伸びるといわれているが、もしも全身の毛が1本に合わさったとすると1分間に約3cm伸びている計算になる。"
+541  590  <eps>                               SYNTH_START|mei|mei_voice_normal|髪の毛は1日に0.3から0.5mm伸びるといわれているが、もしも全身の毛が1本に合わさったとすると1分間に約3cm伸びている計算になる。
+506  507  VALUE_EVENT_EVAL|x|LE|3|FALSE       VALUE_EVAL|x|LE|4
+507  550  VALUE_EVENT_EVAL|x|LE|4|TRUE        <eps>
+550  551  <eps>                               TEXTAREA_SET|caption_1|"パソコンを操作するさいに使うマウス。このマウスを動かした時の長さの単位はミッキーで、１ミッキー、２ミッキーと数える。"
+551  590  <eps>                               SYNTH_START|mei|mei_voice_normal|パソコンを操作するさいに使うマウス。このマウスを動かした時の長さの単位はミッキーで、１ミッキー、２ミッキーと数える。
+507  560  VALUE_EVENT_EVAL|x|LE|4|FALSE       <eps>
+560  561  <eps>                               TEXTAREA_SET|caption_1|"日本の球場は同じ方向を向いて建てられている。理由としてはルールブックに本塁から投手板を経て二塁に向かう線は東北東に向かっている事を理想とするとあるためである。"
+561  590  <eps>                               SYNTH_START|mei|mei_voice_normal|日本の球場は同じ方向を向いて建てられている。理由としてはルールブックに本塁から投手板を経て二塁に向かう線は東北東に向かっている事を理想とするとあるためである。
+590  591  SYNTH_EVENT_STOP|mei                TEXTAREA_DELETE|caption_1
+591  2    <eps>                               MODEL_ADD|menu
+
 
 #bus
-1    601  RECOG_EVENT_STOP|バス　　　　       EXECUTE|https://www.tmu.ac.jp/extra/download.html?d=assets/files/download/campus/1159/03_unkoujikokuhyou_2019kouki.pdf
-1    601  KEY|6                               EXECUTE|https://www.tmu.ac.jp/extra/download.html?d=assets/files/download/campus/1159/03_unkoujikokuhyou_2019kouki.pdf
-601  602  <eps>                               SYNTH_START|mei|mei_voice_normal|南大沢、日野キャンパス間の連絡バスの時刻表を表示します。
-602  2    SYNTH_EVENT_STOP|mei                <eps>
+1    601  RECOG_EVENT_STOP|バス　　　　       MODEL_DELETE|menu
+1    601  KEY|6                               MODEL_DELETE|menu
+601  602  <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+602  603  <eps>                               TEXTAREA_SET|caption_1|"南大沢、日野キャンパスの連絡バスの時刻表を表示します。"
+603  604  <eps>                               SYNTH_START|mei|mei_voice_normal|南大沢、日野キャンパス間の連絡バスの時刻表を表示します。
+604  605  SYNTH_EVENT_STOP|mei                EXECUTE|https://www.tmu.ac.jp/extra/download.html?d=assets/files/download/campus/1159/03_unkoujikokuhyou_2019kouki.pdf
+605  606  <eps>                               TEXTAREA_DELETE|caption_1
+606  2    <eps>                               MODEL_ADD|menu
+
 
 #weather
-1    1001    KEY|e                            MODEL_DELETE|menu
-1    1001    RECOG_EVENT_STOP|天気            MODEL_DELETE|menu
-1    1001    RECOG_EVENT_STOP|予報            MODEL_DELETE|menu
-1    1001    RECOG_EVENT_STOP|天気予報        MODEL_DELETE|menu
-1001 1002    <eps>                            TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
-1002 1003    TEXTAREA_EVENT_ADD|caption_1     TEXTAREA_SET|caption_1|"東京都の天気予報をお知らせします。"
-1003 1004    <eps>                            SYNTH_START|mei|mei_voice_normal|東京都の天気予報をお知らせします。
+1     1001  KEY|e                             MODEL_DELETE|menu
+1     1001  RECOG_EVENT_STOP|天気             MODEL_DELETE|menu
+1     1001  RECOG_EVENT_STOP|予報             MODEL_DELETE|menu
+1     1001  RECOG_EVENT_STOP|天気予報         MODEL_DELETE|menu
+1001  1002  <eps>                             TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+1002  1003  TEXTAREA_EVENT_ADD|caption_1      TEXTAREA_SET|caption_1|"東京都の天気予報をお知らせします。"
+1003  1004  <eps>                             SYNTH_START|mei|mei_voice_normal|東京都の天気予報をお知らせします。
 1004 1005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"今日の天気は曇のち雨です。"
 1005 1006    <eps>                            SYNTH_START|mei|mei_voice_normal|今日の天気は曇のち雨です。
 1006 1007    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の天気は雪のち曇です。"
 1007 1008    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の天気は雪のち曇です。
 1008 1009    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の予想最高気温、5度、予想最低気温、2度です。"
 1009 1010    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の予想最高気温、5度、予想最低気温、2度です。
-1010 1011    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
-1011 2       <eps>                            MODEL_ADD|menu
+1010  1011  SYNTH_EVENT_STOP|mei              TEXTAREA_DELETE|caption_1
+1011  2     <eps>                             MODEL_ADD|menu
+
 
 #date
-1    2001    KEY|i                            MODEL_DELETE|menu
-1    2001    RECOG_EVENT_STOP|日付            MODEL_DELETE|menu
-1    2001    RECOG_EVENT_STOP|日にち          MODEL_DELETE|menu
-1    2001    RECOG_EVENT_STOP|何日            MODEL_DELETE|menu
-1    2001    RECOG_EVENT_STOP|いつ            MODEL_DELETE|menu
-2001 2002    <eps>                            TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
-2002 2003    TEXTAREA_EVENT_ADD|caption_1     TEXTAREA_SET|caption_1|"現在時刻をお知らせします。"
-2003 2004    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻をお知らせします。
-2004 2005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"現在時刻は、1月17日17時10分です。"
-2005 2006    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻は、1月17日17時10分です。
-2006 2007    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
-2007 2       <eps>                            MODEL_ADD|menu
-
-# 3141-3300 seikakusindan
-1     3141   RECOG_EVENT_STOP|ひまつぶし         MODEL_DELETE|menu
-1     3141   RECOG_EVENT_STOP|暇潰し             MODEL_DELETE|menu
-1     3141   RECOG_EVENT_STOP|暇つぶし           MODEL_DELETE|menu
-1     3141   KEY|q                               MODEL_DELETE|menu
-3141  3142   <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
-3142  3143   TEXTAREA_EVENT_ADD|caption_1        TEXTAREA_SET|caption_1|"性格診断をしていくよ。今からする質問に、はいかいいえで答えてね。じゃあスタートするよ。"
-3143  3144   <eps>                               SYNTH_START|mei|mei_voice_normal|性格診断をしていくよ。今からする質問に、はいかいいえで答えてね。じゃあスタートするよ。
-3144  3150   SYNTH_EVENT_STOP|mei                <eps>                               
+1     2001  KEY|i                             MODEL_DELETE|menu
+1     2001  RECOG_EVENT_STOP|日付             MODEL_DELETE|menu
+1     2001  RECOG_EVENT_STOP|日にち           MODEL_DELETE|menu
+1     2001  RECOG_EVENT_STOP|何日             MODEL_DELETE|menu
+1     2001  RECOG_EVENT_STOP|いつ             MODEL_DELETE|menu
+2001  2002  <eps>                             TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+2002  2003  TEXTAREA_EVENT_ADD|caption_1      TEXTAREA_SET|caption_1|"現在時刻をお知らせします。"
+2003  2004  <eps>                             SYNTH_START|mei|mei_voice_normal|現在時刻をお知らせします。
+2004 2005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"現在時刻は、1月17日18時0分です。"
+2005 2006    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻は、1月17日18時0分です。
+2006  2007  SYNTH_EVENT_STOP|mei              TEXTAREA_DELETE|caption_1
+2007  2     <eps>                             MODEL_ADD|menu
 
 
-3150  3151   <eps>                               TEXTAREA_SET|caption_1|"前例がなくてもチャレンジする。"
-3151  3152   <eps>                               SYNTH_START|mei|mei_voice_normal|前例がなくてもチャレンジする。
-3152  3153   SYNTH_EVENT_STOP|mei                <eps>                               
-3153  3160   RECOG_EVENT_STOP|はい               <eps>
-3153  3160   KEY|1                               <eps>
-3153  3170   RECOG_EVENT_STOP|いいえ             <eps>
-3153  3170   KEY|2                               <eps>
+#seikakusindan
+1     3141  RECOG_EVENT_STOP|ひまつぶし       MODEL_DELETE|menu
+1     3141  RECOG_EVENT_STOP|暇潰し           MODEL_DELETE|menu
+1     3141  RECOG_EVENT_STOP|暇つぶし         MODEL_DELETE|menu
+1     3141  KEY|q                             MODEL_DELETE|menu
+3141  3142  <eps>                             TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+3142  3143  TEXTAREA_EVENT_ADD|caption_1      TEXTAREA_SET|caption_1|"性格診断をしていくよ。今からする質問に、はいかいいえで答えてね。じゃあスタートするよ。"
+3143  3144  <eps>                             SYNTH_START|mei|mei_voice_normal|性格診断をしていくよ。今からする質問に、はいかいいえで答えてね。じゃあスタートするよ。
+3144  3150  SYNTH_EVENT_STOP|mei              <eps>                               
 
-3160  3161   <eps>                               TEXTAREA_SET|caption_1|"どちらかといえばユニークな性格である。"
-3161  3162   <eps>                               SYNTH_START|mei|mei_voice_normal|どちらかといえばユニークな性格である。
-3162  3163   SYNTH_EVENT_STOP|mei                <eps>
-3163  3190   RECOG_EVENT_STOP|はい               <eps>
-3163  3190   KEY|1                               <eps>
-3163  3180   RECOG_EVENT_STOP|いいえ             <eps>
-3163  3180   KEY|2                               <eps>
+3150  3151  <eps>                             TEXTAREA_SET|caption_1|"前例がなくてもチャレンジする。"
+3151  3152  <eps>                             SYNTH_START|mei|mei_voice_normal|前例がなくてもチャレンジする。
+3152  3153  SYNTH_EVENT_STOP|mei              <eps>                               
+3153  3160  RECOG_EVENT_STOP|はい             <eps>
+3153  3160  KEY|1                             <eps>
+3153  3170  RECOG_EVENT_STOP|いいえ           <eps>
+3153  3170  KEY|2                             <eps>
 
-3170  3171   <eps>                               TEXTAREA_SET|caption_1|"どちらかというと優柔不断である。"
-3171  3172   <eps>                               SYNTH_START|mei|mei_voice_normal|どちらかというと優柔不断である。
-3172  3173   SYNTH_EVENT_STOP|mei                <eps>
-3173  3190   RECOG_EVENT_STOP|はい               <eps>
-3173  3190   KEY|1                               <eps>
-3173  3200   RECOG_EVENT_STOP|いいえ             <eps>
-3173  3200   KEY|2                               <eps>
+3160  3161  <eps>                             TEXTAREA_SET|caption_1|"どちらかといえばユニークな性格である。"
+3161  3162  <eps>                             SYNTH_START|mei|mei_voice_normal|どちらかといえばユニークな性格である。
+3162  3163  SYNTH_EVENT_STOP|mei              <eps>
+3163  3190  RECOG_EVENT_STOP|はい             <eps>
+3163  3190  KEY|1                             <eps>
+3163  3180  RECOG_EVENT_STOP|いいえ           <eps>
+3163  3180  KEY|2                             <eps>
 
-3180  3181   <eps>                               TEXTAREA_SET|caption_1|"信念に基づいて行動する。"
-3181  3182   <eps>                               SYNTH_START|mei|mei_voice_normal|信念に基づいて行動する。      
-3182  3183   SYNTH_EVENT_STOP|mei                <eps>
-3183  3210   RECOG_EVENT_STOP|はい	       <eps>
-3183  3210   KEY|1                      	       <eps>
-3183  3220   RECOG_EVENT_STOP|いいえ             <eps>
-3183  3220   KEY|2                               <eps>
+3170  3171  <eps>                             TEXTAREA_SET|caption_1|"どちらかというと優柔不断である。"
+3171  3172  <eps>                             SYNTH_START|mei|mei_voice_normal|どちらかというと優柔不断である。
+3172  3173  SYNTH_EVENT_STOP|mei              <eps>
+3173  3190  RECOG_EVENT_STOP|はい             <eps>
+3173  3190  KEY|1                             <eps>
+3173  3200  RECOG_EVENT_STOP|いいえ           <eps>
+3173  3200  KEY|2                             <eps>
 
-3190  3191   <eps>                               TEXTAREA_SET|caption_1|"決断が早い方だ。"
-3191  3192   <eps>                               SYNTH_START|mei|mei_voice_normal|決断が早い方だ。
-3192  3193   SYNTH_EVENT_STOP|mei                <eps>
-3193  3220   RECOG_EVENT_STOP|はい               <eps>
-3193  3220   KEY|1                               <eps>
-3193  3230   RECOG_EVENT_STOP|いいえ             <eps>
-3193  3230   KEY|2                               <eps>
+3180  3181  <eps>                             TEXTAREA_SET|caption_1|"信念に基づいて行動する。"
+3181  3182  <eps>                             SYNTH_START|mei|mei_voice_normal|信念に基づいて行動する。      
+3182  3183  SYNTH_EVENT_STOP|mei              <eps>
+3183  3210  RECOG_EVENT_STOP|はい             <eps>
+3183  3210  KEY|1                             <eps>
+3183  3220  RECOG_EVENT_STOP|いいえ           <eps>
+3183  3220  KEY|2                             <eps>
 
-3200  3201   <eps>                               TEXTAREA_SET|caption_1|"一人で映画を見に行ける。"
-3201  3202   <eps>                               SYNTH_START|mei|mei_voice_normal|一人で映画を見に行ける。
-3202  3203   SYNTH_EVENT_STOP|mei                <eps>
-3203  3230   RECOG_EVENT_STOP|はい               <eps>
-3203  3230   KEY|1                               <eps>
-3203  3240   RECOG_EVENT_STOP|いいえ             <eps>
-3203  3240   KEY|2                               <eps>
+3190  3191  <eps>                             TEXTAREA_SET|caption_1|"決断が早い方だ。"
+3191  3192  <eps>                             SYNTH_START|mei|mei_voice_normal|決断が早い方だ。
+3192  3193  SYNTH_EVENT_STOP|mei              <eps>
+3193  3220  RECOG_EVENT_STOP|はい             <eps>
+3193  3220  KEY|1                             <eps>
+3193  3230  RECOG_EVENT_STOP|いいえ           <eps>
+3193  3230  KEY|2                             <eps>
 
-3210  3211   <eps>                               TEXTAREA_SET|caption_1|"結果が何よりも大事。"
-3211  3212   <eps>                               SYNTH_START|mei|mei_voice_normal|結果が何よりも大事。			       
-3212  3213   SYNTH_EVENT_STOP|mei                <eps>
-3213  3250   RECOG_EVENT_STOP|はい	         <eps>
-3213  3250   KEY|1                 	         <eps>
-3213  3220   RECOG_EVENT_STOP|いいえ             <eps>
-3213  3220   KEY|2                               <eps>
+3200  3201  <eps>                             TEXTAREA_SET|caption_1|"一人で映画を見に行ける。"
+3201  3202  <eps>                             SYNTH_START|mei|mei_voice_normal|一人で映画を見に行ける。
+3202  3203  SYNTH_EVENT_STOP|mei              <eps>
+3203  3230  RECOG_EVENT_STOP|はい             <eps>
+3203  3230  KEY|1                             <eps>
+3203  3240  RECOG_EVENT_STOP|いいえ           <eps>
+3203  3240  KEY|2                             <eps>
 
-3220  3221   <eps>                               TEXTAREA_SET|caption_1|"直感に従うほうだ。"
-3221  3222   <eps>                               SYNTH_START|mei|mei_voice_normal|直感に従うほうだ。
-3222  3223   SYNTH_EVENT_STOP|mei                <eps>
-3223  3260   RECOG_EVENT_STOP|はい               <eps>
-3223  3260   KEY|1                               <eps>
-3223  3250   RECOG_EVENT_STOP|いいえ             <eps>
-3223  3250   KEY|2                               <eps>
+3210  3211  <eps>                             TEXTAREA_SET|caption_1|"結果が何よりも大事。"
+3211  3212  <eps>                             SYNTH_START|mei|mei_voice_normal|結果が何よりも大事。			       
+3212  3213  SYNTH_EVENT_STOP|mei              <eps>
+3213  3250  RECOG_EVENT_STOP|はい	      <eps>
+3213  3250  KEY|1                 	      <eps>
+3213  3220  RECOG_EVENT_STOP|いいえ           <eps>
+3213  3220  KEY|2                             <eps>
 
-3230  3231   <eps>                               TEXTAREA_SET|caption_1|"さみしがり屋で構われたい。"
-3231  3232   <eps>                               SYNTH_START|mei|mei_voice_normal|さみしがり屋で構われたい。
-3232  3233   SYNTH_EVENT_STOP|mei                <eps>
-3233  3270   RECOG_EVENT_STOP|はい               <eps>
-3233  3270   KEY|1                               <eps>
-3233  3280   RECOG_EVENT_STOP|いいえ             <eps>
-3233  3280   KEY|2                               <eps>
+3220  3221  <eps>                             TEXTAREA_SET|caption_1|"直感に従うほうだ。"
+3221  3222  <eps>                             SYNTH_START|mei|mei_voice_normal|直感に従うほうだ。
+3222  3223  SYNTH_EVENT_STOP|mei              <eps>
+3223  3260  RECOG_EVENT_STOP|はい             <eps>
+3223  3260  KEY|1                             <eps>
+3223  3250  RECOG_EVENT_STOP|いいえ           <eps>
+3223  3250  KEY|2                             <eps>
 
-3240  3241   <eps>                               TEXTAREA_SET|caption_1|"こつこつ努力を惜しまない。"
-3241  3242   <eps>                               SYNTH_START|mei|mei_voice_normal|こつこつ努力を惜しまない。
-3242  3243   SYNTH_EVENT_STOP|mei                <eps>
-3243  3280   RECOG_EVENT_STOP|はい               <eps>
-3243  3280   KEY|1                               <eps>
-3243  3230   RECOG_EVENT_STOP|いいえ             <eps>
-3243  3230   KEY|2                               <eps>
+3230  3231  <eps>                             TEXTAREA_SET|caption_1|"さみしがり屋で構われたい。"
+3231  3232  <eps>                             SYNTH_START|mei|mei_voice_normal|さみしがり屋で構われたい。
+3232  3233  SYNTH_EVENT_STOP|mei              <eps>
+3233  3270  RECOG_EVENT_STOP|はい             <eps>
+3233  3270  KEY|1                             <eps>
+3233  3280  RECOG_EVENT_STOP|いいえ           <eps>
+3233  3280  KEY|2                             <eps>
 
-3250  3251   <eps>                               TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは火のタイプ。何事においてもパワフルで、情熱をもって突き進みます。熱しやすく冷めやすい為、周りがついていけないことも多いタイプ。あなたを表すキーワードは。生命力、決断力、アピール性。歴史上の人物なら織田信長。"
-3251  3252   <eps>                               SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは火のタイプ。何事においてもパワフルで、情熱をもって突き進みます。熱しやすく冷めやすい為、周りがついていけないことも多いタイプ。あなたを表すキーワードは。生命力、決断力、アピール性。歴史上の人物なら織田信長。
-3252  3290   SYNTH_EVENT_STOP|mei                <eps>                               
+3240  3241  <eps>                             TEXTAREA_SET|caption_1|"こつこつ努力を惜しまない。"
+3241  3242  <eps>                             SYNTH_START|mei|mei_voice_normal|こつこつ努力を惜しまない。
+3242  3243  SYNTH_EVENT_STOP|mei              <eps>
+3243  3280  RECOG_EVENT_STOP|はい             <eps>
+3243  3280  KEY|1                             <eps>
+3243  3230  RECOG_EVENT_STOP|いいえ           <eps>
+3243  3230  KEY|2                             <eps>
 
-3260  3261   <eps>                               TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは風のタイプ。独特の空気感をかもしだし、自分の感性を大切にマイペースに事をすすめるタイプ。余り群れることは好きではない。あなたを表すキーワードは、楽観的、マイペース、自由。歴史上の人物なら坂本龍馬。"
-3261  3262   <eps>                               SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは風のタイプ。独特の空気感をかもしだし、自分の感性を大切にマイペースに事をすすめるタイプ。余り群れることは好きではない。あなたを表すキーワードは、楽観的、マイペース、自由。歴史上の人物なら坂本龍馬。
-3262  3290   SYNTH_EVENT_STOP|mei                <eps>                               
+3250  3251  <eps>                             TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは火のタイプ。何事においてもパワフルで、情熱をもって突き進みます。熱しやすく冷めやすい為、周りがついていけないことも多いタイプ。あなたを表すキーワードは。生命力、決断力、アピール性。歴史上の人物なら織田信長。"
+3251  3252  <eps>                             SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは火のタイプ。何事においてもパワフルで、情熱をもって突き進みます。熱しやすく冷めやすい為、周りがついていけないことも多いタイプ。あなたを表すキーワードは。生命力、決断力、アピール性。歴史上の人物なら織田信長。
+3252  3290  SYNTH_EVENT_STOP|mei              <eps>
 
-3270  3271   <eps>                               TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは水のタイプ。人の為に役に立つことが大好きで、困っている人を放っておくことができません。いつも誰かと一緒にいないと不安なタイプ。あなたを表すキーワードは、優しさ、情が深い、サポート。歴史上の人物なら直江兼続。"
-3271  3272   <eps>                               SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは水のタイプ。人の為に役に立つことが大好きで、困っている人を放っておくことができません。いつも誰かと一緒にいないと不安なタイプ。あなたを表すキーワードは、優しさ、情が深い、サポート。歴史上の人物なら直江兼続。
-3272  3290   SYNTH_EVENT_STOP|mei                <eps> 
+3260  3261  <eps>                             TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは風のタイプ。独特の空気感をかもしだし、自分の感性を大切にマイペースに事をすすめるタイプ。余り群れることは好きではない。あなたを表すキーワードは、楽観的、マイペース、自由。歴史上の人物なら坂本龍馬。"
+3261  3262  <eps>                             SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは風のタイプ。独特の空気感をかもしだし、自分の感性を大切にマイペースに事をすすめるタイプ。余り群れることは好きではない。あなたを表すキーワードは、楽観的、マイペース、自由。歴史上の人物なら坂本龍馬。
+3262  3290  SYNTH_EVENT_STOP|mei              <eps>
 
-3280  3281   <eps>                               TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは地のタイプ。見た目も態度も安定し安心感があるタイプ。ルールを守り、規則正しい生活を送ります。現状をしっかり分析してから行動に移します。あなたを表すキーワードは、努力、現実的、継続力。歴史上の人物なら徳川家康。"
-3281  3282   <eps>                               SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは地のタイプ。見た目も態度も安定し安心感があるタイプ。ルールを守り、規則正しい生活を送ります。現状をしっかり分析してから行動に移します。あなたを表すキーワードは、努力、現実的、継続力。歴史上の人物なら徳川家康。
-3282  3290   SYNTH_EVENT_STOP|mei                <eps> 
+3270  3271  <eps>                             TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは水のタイプ。人の為に役に立つことが大好きで、困っている人を放っておくことができません。いつも誰かと一緒にいないと不安なタイプ。あなたを表すキーワードは、優しさ、情が深い、サポート。歴史上の人物なら直江兼続。"
+3271  3272  <eps>                             SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは水のタイプ。人の為に役に立つことが大好きで、困っている人を放っておくことができません。いつも誰かと一緒にいないと不安なタイプ。あなたを表すキーワードは、優しさ、情が深い、サポート。歴史上の人物なら直江兼続。
+3272  3290  SYNTH_EVENT_STOP|mei              <eps>
 
-3290  3291   <eps>                               TEXTAREA_SET|caption_1|"「おわり」と言ったらホームに戻ります。"
-3291  3292   RECOG_EVENT_STOP|おわり　　　　　　 TEXTAREA_DELETE|caption_1
-3291  3292   RECOG_EVENT_STOP|終わり　　　　　　 TEXTAREA_DELETE|caption_1
-3291  3292   RECOG_EVENT_STOP|終り　　　　　　　 TEXTAREA_DELETE|caption_1
-3291  3292   KEY|q                               TEXTAREA_DELETE|caption_1
-3292  2      <eps>                               MODEL_ADD|menu
+3280  3281  <eps>                             TEXTAREA_SET|caption_1|"診断結果を教えるよ。あなたは地のタイプ。見た目も態度も安定し安心感があるタイプ。ルールを守り、規則正しい生活を送ります。現状をしっかり分析してから行動に移します。あなたを表すキーワードは、努力、現実的、継続力。歴史上の人物なら徳川家康。"
+3281  3282  <eps>                             SYNTH_START|mei|mei_voice_normal|診断結果を教えるよ。あなたは地のタイプ。見た目も態度も安定し安心感があるタイプ。ルールを守り、規則正しい生活を送ります。現状をしっかり分析してから行動に移します。あなたを表すキーワードは、努力、現実的、継続力。歴史上の人物なら徳川家康。
+3282  3290  SYNTH_EVENT_STOP|mei              <eps>
+
+3290  3291  <eps>                             TEXTAREA_SET|caption_1|"「おわり」と言ったらホームに戻ります。"
+3291  3292  RECOG_EVENT_STOP|おわり           TEXTAREA_DELETE|caption_1
+3291  3292  RECOG_EVENT_STOP|終わり           TEXTAREA_DELETE|caption_1
+3291  3292  RECOG_EVENT_STOP|終り             TEXTAREA_DELETE|caption_1
+3291  3292  KEY|q                             TEXTAREA_DELETE|caption_1
+3292  2     <eps>                             MODEL_ADD|menu
 
 
-# 4141-4150 jk
-1     4141  RECOG_EVENT_STOP|じゃんけん          MODEL_DELETE|menu
-1     4141  KEY|j                                MODEL_DELETE|menu
-4141  4142  <eps>                                TIMER_START|timer_caption|4
-4142  4143  <eps>                                TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
-4143  4144  <eps>                                TEXTAREA_SET|caption_1|"じゃんけんしましょう。最初はブンブン。じゃんけん。"
-4144  4145  <eps>                                SYNTH_START|mei|mei_voice_normal|じゃんけんしましょう。最初は。ブンブン。じゃんけん。
-4145  4146  TIMER_EVENT_STOP|timer_caption       TIMER_START|timer_caption2|2
-4146  4147  <eps>                                VALUE_SET|x|0|3
-4147  4148  VALUE_EVENT_SET|x                    VALUE_EVAL|x|LE|1
+#jk
+1     4141  RECOG_EVENT_STOP|じゃんけん       MODEL_DELETE|menu
+1     4141  KEY|j                             MODEL_DELETE|menu
+4141  4142  <eps>                             TIMER_START|timer_caption|4
+4142  4143  <eps>                             TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+4143  4144  <eps>                             TEXTAREA_SET|caption_1|"じゃんけんしましょう。最初はブンブン。じゃんけん。"
+4144  4145  <eps>                             SYNTH_START|mei|mei_voice_normal|じゃんけんしましょう。最初は。ブンブン。じゃんけん。
+4145  4146  TIMER_EVENT_STOP|timer_caption    TIMER_START|timer_caption2|2
+4146  4147  <eps>                             VALUE_SET|x|0|3
+4147  4148  VALUE_EVENT_SET|x                 VALUE_EVAL|x|LE|1
 
-4148  4150  VALUE_EVENT_EVAL|x|LE|1|TRUE         SYNTH_START|mei|mei_voice_normal|グー
-4150  4151  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
-4151  4190  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|img\janken_gu.jpg
+4148  4150  VALUE_EVENT_EVAL|x|LE|1|TRUE      SYNTH_START|mei|mei_voice_normal|グー
+4150  4151  <eps>                             TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
+4151  4190  TEXTAREA_EVENT_ADD|map            TEXTAREA_SET|map|img\janken_gu.jpg
 
-4148  4160  VALUE_EVENT_EVAL|x|LE|1|FALSE        VALUE_EVAL|x|LE|2
-4160  4170  VALUE_EVENT_EVAL|x|LE|2|TRUE         SYNTH_START|mei|mei_voice_normal|チョキ
-4170  4171  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
-4171  4190  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|img\janken_choki.jpg
+4148  4160  VALUE_EVENT_EVAL|x|LE|1|FALSE     VALUE_EVAL|x|LE|2
+4160  4170  VALUE_EVENT_EVAL|x|LE|2|TRUE      SYNTH_START|mei|mei_voice_normal|チョキ
+4170  4171  <eps>                             TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
+4171  4190  TEXTAREA_EVENT_ADD|map            TEXTAREA_SET|map|img\janken_choki.jpg
 
-4160  4180  VALUE_EVENT_EVAL|x|LE|2|FALSE        SYNTH_START|mei|mei_voice_normal|パー
-4180  4181  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
-4181  4190  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|img\janken_pa.jpg
+4160  4180  VALUE_EVENT_EVAL|x|LE|2|FALSE     SYNTH_START|mei|mei_voice_normal|パー
+4180  4181  <eps>                             TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
+4181  4190  TEXTAREA_EVENT_ADD|map            TEXTAREA_SET|map|img\janken_pa.jpg
 
-4190  4191  SYNTH_EVENT_STOP|mei                 TEXTAREA_DELETE|caption_1
-4191  4192  TIMER_EVENT_STOP|timer_caption2      TEXTAREA_DELETE|map
-4192  2     <eps>                                MODEL_ADD|menu
-
+4190  4191  SYNTH_EVENT_STOP|mei              TEXTAREA_DELETE|caption_1
+4191  4192  TIMER_EVENT_STOP|timer_caption2   TEXTAREA_DELETE|map
+4192  2     <eps>                             MODEL_ADD|menu
 
 
 #music
-1     5001   KEY|m                               MODEL_DELETE|menu
-1     5001   RECOG_EVENT_STOP|音楽               MODEL_DELETE|menu
-5001  5002   <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
-5002  5003   TEXTAREA_EVENT_ADD|caption_1        TEXTAREA_SET|caption_1|"ランダムに曲を再生します。"
-5003  5004   <eps>                               SYNTH_START|mei|mei_voice_normal|ランダムに曲を再生します。
-5004  5005   SYNTH_EVENT_STOP|mei                TEXTAREA_DELETE|caption_1
-5005  5006   <eps>                               VALUE_EVAL|random|LE|70
-5006  5007   VALUE_EVENT_EVAL|random|LE|70|TRUE  SOUND_START|BGM|Music\pre.mp3
-5006  5007   VALUE_EVENT_EVAL|random|LE|70|FALSE SOUND_START|BGM|Music\love.mp3
-5007  2      <eps>                               MODEL_ADD|menu
+1     5001  KEY|m                                MODEL_DELETE|menu
+1     5001  RECOG_EVENT_STOP|音楽                MODEL_DELETE|menu
+5001  5002  <eps>                                TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+5002  5003  TEXTAREA_EVENT_ADD|caption_1         TEXTAREA_SET|caption_1|"ランダムに曲を再生します。"
+5003  5004  <eps>                                SYNTH_START|mei|mei_voice_normal|ランダムに曲を再生します。
+5004  5005  SYNTH_EVENT_STOP|mei                 TEXTAREA_DELETE|caption_1
+5005  5006  <eps>                                VALUE_EVAL|random|LE|70
+5006  5007  VALUE_EVENT_EVAL|random|LE|70|TRUE   SOUND_START|BGM|Music\pre.mp3
+5006  5007  VALUE_EVENT_EVAL|random|LE|70|FALSE  SOUND_START|BGM|Music\love.mp3
+5007  2     <eps>                                MODEL_ADD|menu
 
 1     5010  RECOG_EVENT_STOP|解除                SOUND_STOP|BGM
 1     5010  KEY|n                                SOUND_STOP|BGM
-5010  2    <eps>                                <eps>
+5010  2    <eps>                                 <eps>
+
 
 #train
 1    6001    KEY|c                            MODEL_DELETE|menu
@@ -652,6 +682,7 @@
 6006 6007    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
 6007 2       <eps>                            MODEL_ADD|menu
 
+
 #news
 1    7001    KEY|n                            MODEL_DELETE|menu
 1    7001    RECOG_EVENT_STOP|ニュース        MODEL_DELETE|menu
@@ -664,6 +695,7 @@
 7007 7008    <eps>                            SYNTH_START|mei|mei_voice_normal|本文
 7008 7009    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
 7009 2       <eps>                            MODEL_ADD|menu
+
 
 #reboot
 1    9991    KEY|0                            MODEL_DELETE|menu
