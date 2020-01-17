@@ -452,10 +452,10 @@
 1003 1004    <eps>                            SYNTH_START|mei|mei_voice_normal|東京都の天気予報をお知らせします。
 1004 1005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"今日の天気は曇のち雨です。"
 1005 1006    <eps>                            SYNTH_START|mei|mei_voice_normal|今日の天気は曇のち雨です。
-1006 1007    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の天気は雨のち曇です。"
-1007 1008    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の天気は雨のち曇です。
-1008 1009    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の予想最高気温、6度、予想最低気温、3度です。"
-1009 1010    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の予想最高気温、6度、予想最低気温、3度です。
+1006 1007    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の天気は雪のち曇です。"
+1007 1008    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の天気は雪のち曇です。
+1008 1009    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の予想最高気温、5度、予想最低気温、2度です。"
+1009 1010    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の予想最高気温、5度、予想最低気温、2度です。
 1010 1011    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
 1011 2       <eps>                            MODEL_ADD|menu
 
@@ -468,8 +468,8 @@
 2001 2002    <eps>                            TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
 2002 2003    TEXTAREA_EVENT_ADD|caption_1     TEXTAREA_SET|caption_1|"現在時刻をお知らせします。"
 2003 2004    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻をお知らせします。
-2004 2005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"現在時刻は、1月17日16時38分です。"
-2005 2006    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻は、1月17日16時38分です。
+2004 2005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"現在時刻は、1月17日17時10分です。"
+2005 2006    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻は、1月17日17時10分です。
 2006 2007    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
 2007 2       <eps>                            MODEL_ADD|menu
 
@@ -587,40 +587,51 @@
 3291  3292   KEY|q                               TEXTAREA_DELETE|caption_1
 3292  2      <eps>                               MODEL_ADD|menu
 
+
 # 4141-4150 jk
-   1 4141  RECOG_EVENT_STOP|じゃんけん          TIMER_START|timer_caption|4
-   1 4141  KEY|j                                TIMER_START|timer_caption|4
-4153 4142  VALUE_EVENT_SET|x                    VALUE_EVAL|x|LE|1
-4142 4145  VALUE_EVENT_EVAL|x|LE|1|TRUE         SYNTH_START|mei|mei_voice_normal|グー
-4142 4143  VALUE_EVENT_EVAL|x|LE|1|FALSE        VALUE_EVAL|x|LE|2
-4143 4147  VALUE_EVENT_EVAL|x|LE|2|TRUE         SYNTH_START|mei|mei_voice_normal|チョキ
-4143 4149  VALUE_EVENT_EVAL|x|LE|2|FALSE        SYNTH_START|mei|mei_voice_normal|パー
-4144 4154  SYNTH_EVENT_STOP|mei                 <eps>
-4145 4146  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
-4146 4144  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|image\janken_gu.jpg
-4147 4148  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
-4148 4144  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|image\janken_choki.jpg
-4149 4150  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
-4150 4144  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|image\janken_pa.jpg
-4141 4151  <eps>                                SYNTH_START|mei|mei_voice_normal|じゃんけんしましょう。最初は。ブンブン。じゃんけん。
-4151 4152  TIMER_EVENT_STOP|timer_caption       TIMER_START|timer_caption2|2
-4152 4153  <eps>                                VALUE_SET|x|0|3
-4154    2  TIMER_EVENT_STOP|timer_caption2      TEXTAREA_DELETE|map
+1     4141  RECOG_EVENT_STOP|じゃんけん          MODEL_DELETE|menu
+1     4141  KEY|j                                MODEL_DELETE|menu
+4141  4142  <eps>                                TIMER_START|timer_caption|4
+4142  4143  <eps>                                TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+4143  4144  <eps>                                TEXTAREA_SET|caption_1|"じゃんけんしましょう。最初はブンブン。じゃんけん。"
+4144  4145  <eps>                                SYNTH_START|mei|mei_voice_normal|じゃんけんしましょう。最初は。ブンブン。じゃんけん。
+4145  4146  TIMER_EVENT_STOP|timer_caption       TIMER_START|timer_caption2|2
+4146  4147  <eps>                                VALUE_SET|x|0|3
+4147  4148  VALUE_EVENT_SET|x                    VALUE_EVAL|x|LE|1
+
+4148  4150  VALUE_EVENT_EVAL|x|LE|1|TRUE         SYNTH_START|mei|mei_voice_normal|グー
+4150  4151  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
+4151  4190  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|img\janken_gu.jpg
+
+4148  4160  VALUE_EVENT_EVAL|x|LE|1|FALSE        VALUE_EVAL|x|LE|2
+4160  4170  VALUE_EVENT_EVAL|x|LE|2|TRUE         SYNTH_START|mei|mei_voice_normal|チョキ
+4170  4171  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
+4171  4190  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|img\janken_choki.jpg
+
+4160  4180  VALUE_EVENT_EVAL|x|LE|2|FALSE        SYNTH_START|mei|mei_voice_normal|パー
+4180  4181  <eps>                                TEXTAREA_ADD|map|10,10|1,1,1|1,1,1,0|0,0,0,0|-15,15,0
+4181  4190  TEXTAREA_EVENT_ADD|map               TEXTAREA_SET|map|img\janken_pa.jpg
+
+4190  4191  SYNTH_EVENT_STOP|mei                 TEXTAREA_DELETE|caption_1
+4191  4192  TIMER_EVENT_STOP|timer_caption2      TEXTAREA_DELETE|map
+4192  2     <eps>                                MODEL_ADD|menu
+
+
 
 #music
-1    5001   KEY|m                               MODEL_DELETE|menu
-1    5001   RECOG_EVENT_STOP|音楽               MODEL_DELETE|menu
-5001 5002   <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
-5002 5003   TEXTAREA_EVENT_ADD|caption_1        TEXTAREA_SET|caption_1|"ランダムに曲を再生します。"
-5003 5004   <eps>                               SYNTH_START|mei|mei_voice_normal|ランダムに曲を再生します。
-5004 5005   SYNTH_EVENT_STOP|mei                TEXTAREA_DELETE|caption_1
-5005 5006   <eps>                               VALUE_EVAL|random|LE|70
-5006 5007   VALUE_EVENT_EVAL|random|LE|70|TRUE  SOUND_START|BGM|Music\pre.mp3
-5006 5007   VALUE_EVENT_EVAL|random|LE|70|FALSE SOUND_START|BGM|Music\love.mp3
-5007 2      <eps>                               MODEL_ADD|menu
+1     5001   KEY|m                               MODEL_DELETE|menu
+1     5001   RECOG_EVENT_STOP|音楽               MODEL_DELETE|menu
+5001  5002   <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+5002  5003   TEXTAREA_EVENT_ADD|caption_1        TEXTAREA_SET|caption_1|"ランダムに曲を再生します。"
+5003  5004   <eps>                               SYNTH_START|mei|mei_voice_normal|ランダムに曲を再生します。
+5004  5005   SYNTH_EVENT_STOP|mei                TEXTAREA_DELETE|caption_1
+5005  5006   <eps>                               VALUE_EVAL|random|LE|70
+5006  5007   VALUE_EVENT_EVAL|random|LE|70|TRUE  SOUND_START|BGM|Music\pre.mp3
+5006  5007   VALUE_EVENT_EVAL|random|LE|70|FALSE SOUND_START|BGM|Music\love.mp3
+5007  2      <eps>                               MODEL_ADD|menu
 
-1    5010  RECOG_EVENT_STOP|解除                SOUND_STOP|BGM
-1    5010  KEY|n                                SOUND_STOP|BGM
+1     5010  RECOG_EVENT_STOP|解除                SOUND_STOP|BGM
+1     5010  KEY|n                                SOUND_STOP|BGM
 5010  2    <eps>                                <eps>
 
 #train
