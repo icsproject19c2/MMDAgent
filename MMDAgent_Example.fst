@@ -256,139 +256,191 @@
 134  135  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 135  2    MOTION_EVENT_CHANGE|mei|base        <eps>
 
-# 301- Manzai
+#Manzai
+1    201  RECOG_EVENT_STOP|漫才               MODEL_DELETE|menu
+1    201  KEY|o                               MODEL_DELETE|menu
+201  202  <eps>                               TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
+202  203  <eps>                               MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+203  204  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_greeting\takumi_greeting.vmd
+204  205  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"どうもー。私はタクミです。"
+205  206  <eps>                               SYNTH_START|mei|takumi_voice_normal|どうもお、私はタクミです。
+206  207  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+207  208  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_greeting\mei_greeting.vmd
+208  209  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"私はメイです。よろしくお願いします。"
+209  210  <eps>                               SYNTH_START|mei|mei_voice_normal|私はメイです。よろしくお願いします。
 
-1    301  RECOG_EVENT_STOP|漫才               MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-1    301  KEY|m                               MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-301  302  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_greeting\takumi_greeting.vmd
-302  303  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|どうもお、私はタクミです。
-303  304  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-304  305  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_greeting\mei_greeting.vmd
-305  306  MOTION_EVENT_CHANGE|mei|base        <eps>
+210  211  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+211  212  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+212  213  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"突然やけどね、うちのおかんが好きな朝ごはんがあるらしいんやけど、その名前をちょっと忘れたらしくてね。"
+213  214  <eps>                               SYNTH_START|mei|takumi_voice_normal|とつぜんやけどね、うちのおかんが好きな朝ごはんがあるらしいんやけど、その名前をちょっと忘れたらしくてね。
+214  215  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+215  216  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
+216  217  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"そんなら私が一緒に考えてあげるから、どんな特徴を言うてたか教えてみてよ。"
+217  218  <eps>                               SYNTH_START|mei|mei_voice_normal|そんなら私が一緒に考えてあげるから、どんな特徴をゆうてたか教えてみてよ。
+218  219  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+219  220  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+220  221  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"なんか甘くてカリカリしてて、牛乳とかかけて食べるやつらしいんやけど。"
+221  222  <eps>                               SYNTH_START|mei|takumi_voice_normal|なんか甘くてカリカリしてて、牛乳とかかけて食べるやつらしいんやけど。
+222  223  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+223  224  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 
-306  307   <eps>                              SYNTH_START|mei|mei_voice_normal|私はメイです。よろしくお願いします。
+224  225  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"コーンフレークやんか。その特徴は完全にコーンフレークやがな。すぐ分かったやんこんなん。"
+225  226  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークやんか。その特徴は完全にコーンフレークやがな。すぐわかったやんこんなん。
+226  227  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+227  228  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+228  229  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"いや、俺もコーンフレークやと思ったんやけどな、おかんが言うには死ぬ前の最後のご飯もそれでいい言うてんねん。"
+229  230  <eps>                               SYNTH_START|mei|takumi_voice_normal|いや、俺もコーンフレークやと思ったんやけどな、おかんがゆうには死ぬまえの最後のごはんもそれでいいゆうてんねん。
+230  231  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+231  232  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
+232  233  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"ほーん。そんならコーンフレークと違うか。人生最後の食事がコーンフレークでええ訳ないもんね。"
+233  234  <eps>                               SYNTH_START|mei|mei_voice_normal|ほーん、そんならコーンフレークと違うか。人生最後の食事がコーンフレークでええ訳ないもんね。
+234  235  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"コーンフレークはまだ寿命に余裕があるから食べてられんねん。コーンフレーク側も最後のご飯に任命されたら荷が重いわ。"
+235  236  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークはまだ寿命に余裕があるから食べてられんねん。コーンフレーク側も最後のごはんに任命されたら荷が重いわ。
+236  237  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"てことはコーンフレークちゃうかあ。ならもうちょっと詳しく教えてくれる？"
+237  238  <eps>                               SYNTH_START|mei|mei_voice_normal|てことはコーンフレークちゃうかあ。ならもうちょっと詳しく教えてくれる？
+238  239  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+239  240  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+240  241  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"なんであんなに栄養バランスの五角形でかいか分からんらしいわ。"
+241  242  <eps>                               SYNTH_START|mei|takumi_voice_normal|なんであんなに栄養バランスの五角形でかいかわからんらしいわ。
+242  243  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+243  244  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 
-307  308  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-308  309  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-309  310  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|とつぜんやけどね、うちのおかんが好きな朝ごはんがあるらしいんやけど、その名前をちょっと忘れたらしくてね。
-310  311  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-311  312  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-312  313  MOTION_EVENT_CHANGE|mei|base        <eps>
+244  245  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"コーンフレークやないかい。パッケージに書いてある五角形めちゃくちゃでかいんやから。"
+245  246  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。パッケージに書いてある五角形めちゃくちゃでかいんやから。
+246  247  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"でもあれは自分の得意な項目だけで勝負してるからやとにらんでんねん。私の目は騙されへんよ。"
+247  248  <eps>                               SYNTH_START|mei|mei_voice_normal|でもあれは自分の得意な項目だけで勝負してるからやとにらんでんねん。私の目は騙されへんよ。
+248  249  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+249  250  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+250  251  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"でも分からへんねん。"
+251  252  <eps>                               SYNTH_START|mei|takumi_voice_normal|でも分からへんねん。
+252  253  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+253  254  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
+254  255  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"何が分からへんの。"
+255  256  <eps>                               SYNTH_START|mei|mei_voice_normal|何が分からへんの。
+256  257  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+257  258  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+258  259  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"おかんが言うには晩飯にもよく出てくるらしいねん。"
+259  260  <eps>                               SYNTH_START|mei|takumi_voice_normal|おかんがゆうには晩飯にもよく出てくるらしいねん。
+260  261  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+261  262  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 
-313  314   <eps>                              SYNTH_START|mei|mei_voice_normal|そんなら私が一緒に考えてあげるから、どんな特徴をいうてたか教えてみてよ。
+262  263  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"ほなコーンフレークと違うやないかい。晩飯でコーンフレーク出てきたらちゃぶ台ひっくり返すもんね。"
+263  264  <eps>                               SYNTH_START|mei|mei_voice_normal|ほなコーンフレークと違うやないかい。晩めしでコーンフレーク出てきたらちゃぶ台ひっくり返すもんね。
+264  265  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"コーンフレークはまだ朝の寝ぼけてるときやから食べてられんねん。"
+265  266  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークはまだ朝の寝ぼけてるときやから食べてられんねん。
+266  267  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"それで食べてるうちにだんだん目が覚めてくるから最後ちょっとだけ残してまうねん。そういうカラクリやからね。"
+267  268  <eps>                               SYNTH_START|mei|mei_voice_normal|それで食べてるうちにだんだん目が覚めてくるから最後ちょっとだけ残してまうねん。そういうカラクリやからね。
+268  269  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"コーンフレークちゃうがな。ほな、なんか他言うてなかった？"
+269  270  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークちゃうがな。ほな、なんかほかゆうてなかった？
+270  271  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+271  272  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+272  273  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"子供のころ何故かみんな憧れたらしい。"
+273  274  <eps>                               SYNTH_START|mei|takumi_voice_normal|子供のころ何故かみんな憧れたらしい。
+274  275  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+275  276  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 
+276  277  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"コーンフレークやないかい。コーンフレークとミロとフルーチェはみんな憧れたんや。"
+277  278  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。コーンフレークとミロとフルーチェはみんな憧れたんや。
+278  279  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"コーンフレークやそんなもん。"
+279  280  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークやそんなもん。
+280  281  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+281  282  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+282  283  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"でも、おかんが言うにはお坊さんが修行の時も食べてるって。"
+283  284  <eps>                               SYNTH_START|mei|takumi_voice_normal|でも、おかんがゆうにはお坊さんが修行の時も食べてるって。
+284  285  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+285  286  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
+
+286  287  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"ほなコーンフレークちゃうやないかい。精進料理にカタカナのメニューなんか出えへんねん。"
+287  288  <eps>                               SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうやないかい。精進料理にカタカナのメニューなんかでえへんねん。
+288  289  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"コーンフレークはね、朝から楽して腹を満たしたいという煩悩の塊やからね。あれみんな煩悩に牛乳かけとんねん。"
+289  290  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークはね、朝かららくして腹を満たしたいという煩悩の塊やからね。あれみんな煩悩に牛乳かけとんねん。
+290  291  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"ほなコーンフレークちゃうがな。なんかもうちょっと言ってなかったか？"
+291  292  <eps>                               SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうがな。なんかもうちょっとゆってなかったか？
+292  293  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+293  294  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+294  295  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"パフェとかのかさ増しに使われてるらしいわ。"
+295  296  <eps>                               SYNTH_START|mei|takumi_voice_normal|パフェとかのかさましに使われてるらしいわ。
+296  297  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+297  298  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
+
+298  299  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"コーンフレークやないかい。あれ法律すれすれくらい入ってるんやから。"
+299  300  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。あれ法律すれすれくらい入ってるんやから。
+300  301  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"店側がもう一段増やそうもんなら私は動くよもう。"
+301  302  <eps>                               SYNTH_START|mei|mei_voice_normal|店側がもう一段増やそうもんなら私は動くよもう。
+302  303  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+303  304  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+304  305  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"俺もコーンフレークやと思うんやけどな、おかんが言うにはジャンルで言うたら中華らしいわ。"
+305  306  <eps>                               SYNTH_START|mei|takumi_voice_normal|俺もコーンフレークやと思うんやけどな、おかんがゆうにはジャンルで言うたら中華らしいわ。
+306  307  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+307  308  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
+
+308  309  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"ほなコーンフレークちゃうやないかい。ジャンル全く分からんけど中華だけではないねん。"
+309  310  <eps>                               SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうやないかい。ジャンル全くわからんけど中華だけではないねん。
+310  311  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"もし回るテーブルの上にコーンフレーク置いたら回した時全部飛び散るからね。コーンフレークちゃうやないかい。"
+311  312  <eps>                               SYNTH_START|mei|mei_voice_normal|もし回るテーブルの上にコーンフレーク置いたら回した時全部飛び散るからね。コーンフレークちゃうやないかい。
+312  313  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"ほなもうちょっとなんか言ってなかった？"
+313  314  <eps>                               SYNTH_START|mei|mei_voice_normal|ほなもうちょっとなんかゆってなかった？
 314  315  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
 315  316  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-316  317  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|なんか甘くてカリカリしてて、牛乳とかかけて食べるやつらしいんやけど。
-317  318  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-318  319  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-319  320  MOTION_EVENT_CHANGE|mei|base        <eps>
+316  317  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"食べるときに誰に感謝していいか分からんらしいわ。"
+317  318  <eps>                               SYNTH_START|mei|takumi_voice_normal|食べるときに誰に感謝していいか分からんらしいわ。
+318  319  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+319  320  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 
-320  321   <eps>                              SYNTH_START|mei|mei_voice_normal|コーンフレークやんか。その特徴は完全にコーンフレークやがな。すぐわかったやんこんなん。
+320  321  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"コーンフレークやないかい。コーンフレークは生産者さんの顔が浮かばへんのよ。"
+321  322  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。コーンフレークは生産者さんの顔が浮かばへんのよ。
+322  323  SYNTH_EVENT_STOP|mei                TEXTAREA_SET|caption_1|"コーンフレークに決まりや。おかんの好きな朝ご飯はコーンフレーク。"
+323  324  <eps>                               SYNTH_START|mei|mei_voice_normal|コーンフレークに決まりや。おかんの好きな朝ごはんはコーンフレーク。
+324  325  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+325  326  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+326  327  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"でもおかんが言うにはコーンフレークではない言うねん。"
+327  328  <eps>                               SYNTH_START|mei|takumi_voice_normal|でもおかんが言うにはコーンフレークではない言うねん。
+328  329  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+329  330  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
 
-321  322  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-322  323  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-323  324  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|いや、俺もコーンフレークやと思ったんやけどな、おかんが言うには死ぬまえの最後のごはんもそれでいい言うてんねん。
-324  325  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-325  326  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-326  327  MOTION_EVENT_CHANGE|mei|base        <eps>
+330  331  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"ほなコーンフレークちゃうやないかい。おかんがコーンフレークちゃう言うなら違うやないかい。先言えよ。"
+331  332  <eps>                               SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうやないかい。おかんがコーンフレークちゃうゆうなら違うやないかい。先言えよ。
+332  333  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
+333  334  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
+334  335  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"でもおとんが言うにはサバの塩焼きちゃうかって。"
+335  336  <eps>                               SYNTH_START|mei|takumi_voice_normal|でもおとんが言うにはサバの塩焼きちゃうかって。
+336  337  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
+337  338  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
+338  339  MOTION_EVENT_CHANGE|mei|base        TEXTAREA_SET|caption_1|"絶対ちゃうやろ。もうええわ。ありがとうございました。"
+339  340  <eps>                               SYNTH_START|mei|mei_voice_normal|絶対ちゃうやろ。もうええわ。ありがとうございました。
+340  341  SYNTH_EVENT_STOP|mei                TEXTAREA_DELETE|caption_1
+341  2    <eps>                               MODEL_ADD|menu
 
-327  328   <eps>                              SYNTH_START|mei|mei_voice_normal|ほーん、そんならコーンフレークと違うか。人生最後の食事がコーンフレークでええ訳ないもんね。
-328  329  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|コーンフレークはまだ寿命に余裕があるから食べてられんねん。コーンフレーク側も最後のごはんに任命されたら荷が重いわ。
-329  330  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|てことはコーンフレークちゃうかあ。ならもうちょっと詳しく教えてくれる？
+#zatugaku  0501-0600
+1    501   RECOG_EVENT_STOP|雑学                VALUE_SET|x|0|6
+1    501   RECOG_EVENT_STOP|雑談                VALUE_SET|x|0|6
+1    501   KEY｜y                               VALUE_SET|x|0|6        
 
-330  331  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-331  332  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-332  333  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|なんであんなに栄養バランスの五角形でかいかわからんらしいわ。
-333  334  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-334  335  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-335  336  MOTION_EVENT_CHANGE|mei|base        <eps>
+501  502   VALUE_EVENT_SET|x                    VALUE_EVAL|x|LE|1
+502  512   VALUE_EVENT_EVAL|x|LE|1|TRUE         <eps>
+512  550   <eps>                                SYNTH_START|mei|mei_voice_normal|ネズミといえばチーズが大好物というイメージがある。しかし、ネズミはチーズが好きではなく、他に食べ物があるときは絶対に食べない。
+502  503   VALUE_EVENT_EVAL|x|LE|1|FALSE        VALUE_EVAL|x|LE|2
+503  513   VALUE_EVENT_EVAL|x|LE|2|TRUE         <eps>
+513  550   <eps>                                SYNTH_START|mei|mei_voice_normal|スポーツドリンクはスポーツ選手の水分補給用に開発されたが、体に吸収される速度は水よりも遅い。 
+503  504   VALUE_EVENT_EVAL|x|LE|2|FALSE        VALUE_EVAL|x|LE|3
+504  514   VALUE_EVENT_EVAL|x|LE|3|TRUE         <eps>
+514  550   <eps>                                SYNTH_START|mei|mei_voice_normal|髪の毛は1日に0.3から0.5mm伸びるといわれているが、もしも全身の毛が1本に合わさったとすると1分間に約3cm伸びている計算になる。
+504  505   VALUE_EVENT_EVAL|x|LE|3|FALSE        VALUE_EVAL|x|LE|4
+505  515   VALUE_EVENT_EVAL|x|LE|4|TRUE         <eps>
+515  550   <eps>                                SYNTH_START|mei|mei_voice_normal|開発されたが、体に吸収される速度は水よりも遅い。 
+505  506   VALUE_EVENT_EVAL|x|LE|4|FALSE        VALUE_EVAL|x|LE|5
+506  516   VALUE_EVENT_EVAL|x|LE|5|TRUE         <eps>
+516  550   <eps>                                SYNTH_START|mei|mei_voice_normal|パソコンを操作するさいに使うマウス。このマウスを動かした時の長さの単位はミッキーで、１ミッキー、２ミッキーと数える。
+506  517   VALUE_EVENT_EVAL|x|LE|5|FALSE        <eps>
+517  550   <eps>                                SYNTH_START|mei|mei_voice_normal|日本の球場は同じ方向を向いて建てられている。理由としてはルールブックに本塁から投手板を経て二塁に向かう線は東北東に向かっている事を理想とするとあるためである。
 
-336  337   <eps>                              SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。パッケージに書いてある五角形めちゃくちゃでかいんやから。
-337  338  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|でもあれは自分の得意な項目だけで勝負してるからやとにらんでんねん。私の目は騙されへんよ。
+550   2    SYNTH_EVENT_STOP|mei                 <eps>
 
-338  339  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-339  340  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-340  341  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|でも分からへんねん。
-341  342  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-342  343  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-343  344  MOTION_EVENT_CHANGE|mei|base        <eps>
-
-344  345   <eps>                              SYNTH_START|mei|mei_voice_normal|何が分からへんの。
-
-345  346  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-346  347  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-347  348  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|おかんが言うには晩飯にもよく出てくるらしいねん。
-348  349  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-349  350  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-350  351   <eps>                              SYNTH_START|mei|mei_voice_normal|ほなコーンフレークと違うやないかい。晩めしでコーンフレーク出てきたらちゃぶ台ひっくり返すもんね。
-351  352  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|コーンフレークはまだ朝の寝ぼけてるときやから食べてられんねん。
-352  353  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|それで食べてるうちにだんだん目が覚めてくるから最後ちょっとだけ残してまうねん。そういうカラクリやからね。
-353  354  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|コーンフレークちゃうがな。ほな、なんかほかゆうてなかった？
-
-354  355  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-355  356  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-356  357  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|子供のころ何故かみんな憧れたらしい。
-357  358  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-358  359  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-359  360   <eps>                              SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。コーンフレークとミロとフルーチェはみんな憧れたんや。
-360  361  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|コーンフレークやそんなもん。
-
-361  362  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-362  363  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-363  364  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|でも、おかんが言うにはお坊さんが修行の時も食べてるって。
-364  365  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-365  366  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-366  373   <eps>           　　　　　　　　   SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうやないかい。精進料理にカタカナのメニューなんかでえへんねん。
-373  374  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|コーンフレークはね、朝から楽して腹を満たしたいという煩悩の塊やからね。あれみんな煩悩に牛乳かけとんねん。
-374  375  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうがな。なんかもうちょっと言ってなかったか？
-
-375  376  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-376  377  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-377  378  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|パフェとかのかさましに使われてるらしいわ。
-378  379  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-379  380  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-380  381   <eps>           　　　　　　　　   SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。あれ法律すれすれくらい入ってるんやから。
-381  382  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|店側がもう一段増やそうもんなら私は動くよもう。
-
-382  383  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-383  384  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-384  385  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|俺もコーンフレークやと思うんやけどな、おかんが言うにはジャンルで言うたら中華らしいわ。
-385  386  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-386  387  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-387  388   <eps>           　　　　　　　　   SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうやないかい。ジャンル全くわからんけど中華だけではないねん。
-388  389  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|もし回るテーブルの上にコーンフレーク置いたら回した時全部飛び散るからね。コーンフレークちゃうやないかい。
-389  390  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|ほなもうちょっとなんか言ってなかった？
-
-390  391  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-391  392  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-392  393  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|食べるときに誰に感謝していいか分からんらしいわ。
-393  394  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-394  395  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-395  396   <eps>           　　　　　　　　   SYNTH_START|mei|mei_voice_normal|コーンフレークやないかい。コーンフレークは生産者さんの顔が浮かばへんのよ。
-396  397  SYNTH_EVENT_STOP|mei                SYNTH_START|mei|mei_voice_normal|コーンフレークに決まりや。おかんの好きな朝ごはんはコーンフレーク。。
-
-397  398  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-398  399  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-399  400  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|でもおかんが言うにはコーンフレークではない言うねん。
-400  401  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-401  402  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-402  403   <eps>           　　　　　　　　   SYNTH_START|mei|mei_voice_normal|ほなコーンフレークちゃうやないかい。おかんがコーンフレークちゃう言うなら違うやないかい。先言えよ。
-
-403  404  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\takumi_parka\takumi_parka.pmd
-404  405  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\takumi_wait\takumi_wait.vmd
-405  406  MOTION_EVENT_CHANGE|mei|base        SYNTH_START|mei|takumi_voice_normal|でもおとんが言うにはサバの塩焼きちゃうかって。
-406  407  SYNTH_EVENT_STOP|mei                MODEL_CHANGE|mei|Model\mei\mei.pmd
-407  408  MODEL_EVENT_CHANGE|mei              MOTION_CHANGE|mei|base|Motion\mei_wait\mei_wait.vmd
-
-408  2    <eps>           　　　　　　　　   SYNTH_START|mei|mei_voice_normal|絶対ちゃうやろ。もうええわ。ありがとうございました。
+#bus
+1    601  RECOG_EVENT_STOP|バス　　　　       EXECUTE|https://www.tmu.ac.jp/extra/download.html?d=assets/files/download/campus/1159/03_unkoujikokuhyou_2019kouki.pdf
+1    601  KEY|6                               EXECUTE|https://www.tmu.ac.jp/extra/download.html?d=assets/files/download/campus/1159/03_unkoujikokuhyou_2019kouki.pdf
+601  602  <eps>                               SYNTH_START|mei|mei_voice_normal|南大沢、日野キャンパス間の連絡バスの時刻表を表示します。
+602  2    SYNTH_EVENT_STOP|mei                <eps>
 
 #weather
 1    1001    KEY|e                            MODEL_DELETE|menu
@@ -398,12 +450,12 @@
 1001 1002    <eps>                            TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
 1002 1003    TEXTAREA_EVENT_ADD|caption_1     TEXTAREA_SET|caption_1|"東京都の天気予報をお知らせします。"
 1003 1004    <eps>                            SYNTH_START|mei|mei_voice_normal|東京都の天気予報をお知らせします。
-1004 1005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"今日の天気は雨のち曇です。"
-1005 1006    <eps>                            SYNTH_START|mei|mei_voice_normal|今日の天気は雨のち曇です。
-1006 1007    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の天気は晴のち曇です。"
-1007 1008    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の天気は晴のち曇です。
-1008 1009    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の予想最高気温、11度、予想最低気温、4度です。"
-1009 1010    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の予想最高気温、11度、予想最低気温、4度です。
+1004 1005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"今日の天気は曇のち雨です。"
+1005 1006    <eps>                            SYNTH_START|mei|mei_voice_normal|今日の天気は曇のち雨です。
+1006 1007    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の天気は雨のち曇です。"
+1007 1008    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の天気は雨のち曇です。
+1008 1009    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"明日の予想最高気温、6度、予想最低気温、3度です。"
+1009 1010    <eps>                            SYNTH_START|mei|mei_voice_normal|明日の予想最高気温、6度、予想最低気温、3度です。
 1010 1011    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
 1011 2       <eps>                            MODEL_ADD|menu
 
@@ -416,8 +468,8 @@
 2001 2002    <eps>                            TEXTAREA_ADD|caption_1|50,-1|1.2,1,1|1,1,1,0.7|0,0,0,1|0,3,-2
 2002 2003    TEXTAREA_EVENT_ADD|caption_1     TEXTAREA_SET|caption_1|"現在時刻をお知らせします。"
 2003 2004    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻をお知らせします。
-2004 2005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"現在時刻は、1月15日12時8分です。"
-2005 2006    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻は、1月15日12時8分です。
+2004 2005    SYNTH_EVENT_STOP|mei             TEXTAREA_SET|caption_1|"現在時刻は、1月17日16時38分です。"
+2005 2006    <eps>                            SYNTH_START|mei|mei_voice_normal|現在時刻は、1月17日16時38分です。
 2006 2007    SYNTH_EVENT_STOP|mei             TEXTAREA_DELETE|caption_1
 2007 2       <eps>                            MODEL_ADD|menu
 
